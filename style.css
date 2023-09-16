@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgb(141, 195, 59);
+}
+/* Designing Logo */
+.logo{
+    font-size: 24px;
+    margin: auto 20px;
+    /* font-weight: 1000; */
+    color: white;
+    padding: 6px 6px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border-left: 2px solid rgb(141, 195, 59);
+    border-top: 2px solid rgb(141, 195, 59);
+}
+#navbar {
+    /* position: absolute; */
+    /* margin: auto; */
+    display: flex;
+    min-height: 80px;
+    background-color: black;
+    align-items: center;
+    /* To make the space between logo and list */
+    justify-content: space-between;
+    padding: 0px 10 0px 20px;
+}
+#navbar ul{
+    /* text-align: right; */
+    display: flex;
+    list-style: none;
+}
+#navbar ul li{
+    margin: 0 20px;
+}
+#navbar ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    transition: all 0.2s ease;
+}
+#navbar ul li a:hover{
+    border-bottom: 2px solid rgb(141, 195, 59);
+    color: rgb(141, 195, 59);
+    font-weight: 600;
+}
+/* Styling The Hamburger Menu */
+#navbar .menu-button i{
+    cursor: pointer;
+    display: none;
+    margin: auto 20px;
+}
+#click{
+    display: none;
+}
+#click:checked ~ ul{
+    right: 0%;
+}
+#click:checked ~ .menu-button i:before{
+    content: "\f00d";
+}
+/* Making Responsive */
+@media(max-width: 900px){
+    #navbar .menu-button i{
+        display: block;
+    }
+    #navbar ul{
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color: black; 
+        height: 100vh; 
+        width: 60%;
+        display: block;
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+    #navbar ul li{
+        margin: 40px 0;
+
+    }
+    #navbar ul li a{
+        font-size: 18px;
+    }
+    
+}
+@media(max-width :600px){
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        margin: auto;
+        font-size: 0.8rem;
+    }
+}
+@media(max-width: 250px){
+    #navbar ul{
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color: black; 
+        height: 100vh; 
+        width: 60%;
+        display: block;
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+    #navbar ul li{
+        margin: 10px 0;
+
+    }
+    #navbar ul li a{
+        font-size: 10px;
+    }
+}
+.text{
+    /* background-color: aqua; */
+    height: 80vh;
+    /* color: #fff; */
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+
+    margin: auto;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+
+}
